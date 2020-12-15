@@ -1,0 +1,31 @@
+{
+  "name": "pipebli.node",
+  "version": "1.0.0",
+  "description": "This is an api that creates an integration with Pipedrive and Bling and manages data using a mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chicofariasneto/pipebli.node.git"
+  },
+  "author": "chicofariasneto",
+  "keywords": [
+    "Pipedrive",
+    "Bling",
+    "Node",
+    "Api",
+    "MongoDB"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chicofariasneto/pipebli.node/issues"
+  },
+  "homepage": "https://github.com/chicofariasneto/pipebli.node#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "dotenv": "^8.2.0"
+  }
+}
