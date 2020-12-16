@@ -12,7 +12,7 @@ const pipedrive = {
 /**
  * This function returns each deal that has status won on pipedrive.
  *
- * @returns {Promise<Array<Object>>}
+ * @returns {Promise<{success: boolean, data: [Object]}>}
  */
 const dealsWon = async () => {
     try {
@@ -23,10 +23,12 @@ const dealsWon = async () => {
             }
         });
 
-        return query.data;
+        return {success: true, data: query.data};
     } catch (error) {
-        return [];
+        return {success: false, data: []};
     }
 }
 
-dealsWon().then(console.log);
+module.exports = {
+    dealsWon
+}
