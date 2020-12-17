@@ -1,5 +1,6 @@
 module.exports = class Cliente {
     /**
+     * Constructor of a Cliente
      *
      * @param nome
      * @param tipoPessoa

@@ -1,5 +1,6 @@
 module.exports = class Volume {
     /**
+     * Constructor to creates a Volume
      *
      * @param servico
      * @param codigoRastreamento

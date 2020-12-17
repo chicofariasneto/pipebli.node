@@ -2,6 +2,7 @@ const DadosEtiqueta = require('./Tag.class');
 const Volume = require('./Volume.class');
 
 /**
+ * This is a function to creates an array of Volume's object
  *
  * @param volumes
  * @returns {[Volume]}
@@ -19,6 +20,7 @@ const createVolumes = (volumes) => {
 
 module.exports = class Transporte {
     /**
+     * Constructor to creates a Transporte
      *
      * @param transportadora
      * @param tipoFrete

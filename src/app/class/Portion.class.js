@@ -1,5 +1,6 @@
 module.exports = class Parcela {
     /**
+     * Constructor to creates a Parcela
      *
      * @param data
      * @param vlr

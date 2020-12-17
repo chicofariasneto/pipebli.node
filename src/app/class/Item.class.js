@@ -1,5 +1,6 @@
 module.exports = class Item {
     /**
+     * Constructor of an Item
      *
      * @param codigo
      * @param descricao

@@ -1,5 +1,6 @@
 module.exports = class DadosEtiqueta {
     /**
+     * Constructor to creates a DadosEtiqueta
      *
      * @param nome
      * @param endereco

@@ -4,6 +4,7 @@ const Item = require('./Item.class');
 const Parcela = require('./Portion.class');
 
 /**
+ * This is a function to creates an array of Item's object
  *
  * @param items
  * @returns {[Item]}
@@ -20,6 +21,7 @@ const createItems = (items) => {
 }
 
 /**
+ * This is a function to creates an array of Parcela's object
  *
  * @param parcelas
  * @returns {[Parcela]}
@@ -37,6 +39,7 @@ const createPortions = (parcelas) => {
 
 module.exports = class Pedido {
     /**
+     * This is the most important Constructor of the project, it's for creates a Pedido
      *
      * @param cliente
      * @param transporte
