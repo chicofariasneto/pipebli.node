@@ -1,12 +1,16 @@
-### pipebli.node
+# pipebli.node
 This is a node api that integrates Pipedrive api, Bling api and a mongoDB collection.
 
 ### Requirements
--[x] Criar contas testes nas plataformas Pipedrive e Bling.
--[x] Criar uma integração entre as plataformas Pipedrive e Bling. (A integração deve buscar as oportunidades com status igual a ganho no Pipedrive, depois inseri-las como pedido no Bling).
--[x] Criar banco de dados mongo, existem serviços como MongoDB Atlas para criar de graça
--[x] Criar uma collection no banco de dados MongoDB agregando as oportunidades inseridas no Bling por dia e valor total.
--[x] Criar endpoint para trazer os dados consolidados da collection do MongoDB.
+- [x] Criar contas testes nas plataformas Pipedrive e Bling.
+
+- [x] Criar uma integração entre as plataformas Pipedrive e Bling. (A integração deve buscar as oportunidades com status igual a ganho no Pipedrive, depois inseri-las como pedido no Bling).
+
+- [x] Criar banco de dados mongo, existem serviços como MongoDB Atlas para criar de graça
+
+- [x] Criar uma collection no banco de dados MongoDB agregando as oportunidades inseridas no Bling por dia e valor total.
+
+- [x] Criar endpoint para trazer os dados consolidados da collection do MongoDB.
 
 ### How to use it
 
