@@ -10,11 +10,22 @@ require('dotenv').config();
  */
 require('./app/service/cron.service')();
 
+const mongoose = require('mongoose');
+
 /**
  * Basic imports to start an api
  */
 const express = require('express');
 const bodyParser = require('body-parser');
+
+/**
+ * Mongodb connection
+ */
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 /**
  * initial setup
