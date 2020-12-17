@@ -30,8 +30,9 @@ module.exports = class Transporte {
         this.tipo_frete = tipoFrete;
         this.servico_correios = servicoCorreios;
 
-        this.dados_etiquetas = new DadosEtiqueta(dadosEtiqueta.nome, dadosEtiqueta.endereco, dadosEtiqueta.numero,
-            dadosEtiqueta.complemento, dadosEtiqueta.municipio, dadosEtiqueta.uf, dadosEtiqueta.cep, dadosEtiqueta.bairro);
+        if (dadosEtiqueta !== undefined)
+            this.dados_etiquetas = new DadosEtiqueta(dadosEtiqueta.nome, dadosEtiqueta.endereco, dadosEtiqueta.numero,
+                dadosEtiqueta.complemento, dadosEtiqueta.municipio, dadosEtiqueta.uf, dadosEtiqueta.cep, dadosEtiqueta.bairro);
 
         this.volumes = createVolumes(volumes);
     }
