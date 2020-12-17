@@ -12,7 +12,7 @@ const createItems = (items) => {
     const itemsObj = [];
 
     items.forEach(element => {
-        itemsObj.push(new Item(element.codigo, element.descricao, element.un, element.qtde, vlrUnit));
+        itemsObj.push(new Item(element.codigo, element.descricao, element.un, element.qtde));
     });
 
     return itemsObj;
