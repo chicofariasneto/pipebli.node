@@ -1,3 +1,6 @@
+/**
+ * Imports
+ */
 const Pedido = require('../class/Order.class');
 const {Order} = require('../model/product.collection');
 const {dealsWon} = require('./pipedrive.service');
@@ -12,9 +15,9 @@ const {createXml} = require('../logic/xml.logic');
  */
 const cron = require("node-cron");
 module.exports = () => {
-    cron.schedule('0 10 23 * * *', async () => {
+    cron.schedule('0 0 23 * * *', async () => {
         try {
-            console.log('running a task every 23 hours');
+            console.log('running a task every 23:00 hours');
             const {success, data: {data}} = await dealsWon();
 
             if (success && data) {
