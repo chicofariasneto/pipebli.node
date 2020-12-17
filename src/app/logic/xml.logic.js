@@ -1,4 +1,5 @@
 /**
+ * This function creates a Cliente in a xml string
  *
  * @param cliente
  * @returns {string}
@@ -32,6 +33,7 @@ const client = (cliente) => {
 };
 
 /**
+ * This function creates a Transporte in a xml string
  *
  * @param transporte
  * @returns {string}
@@ -80,6 +82,7 @@ const transport = (transporte) => {
 };
 
 /**
+ * This is a function to creates a Items in xml string
  *
  * @param items
  * @returns {string}
@@ -105,6 +108,7 @@ const items = (items) => {
 };
 
 /**
+ * This is a function to creates a Parcelas in xml string
  *
  * @param parcelas
  * @returns {string}
@@ -124,6 +128,7 @@ const portions = (parcelas) => {
 }
 
 /**
+ * This is a function to creates a Pedido in xml string
  *
  * @param pedido
  * @returns {string}
