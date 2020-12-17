@@ -12,7 +12,8 @@ const createItems = (items) => {
     const itemsObj = [];
 
     items.forEach(element => {
-        itemsObj.push(new Item(element.codigo, element.descricao, element.un, element.qtde));
+        if (element !== undefined)
+            itemsObj.push(new Item(element.codigo, element.descricao, element.un, element.qtde));
     });
 
     return itemsObj;
@@ -27,7 +28,8 @@ const createPortions = (parcelas) => {
     const parcelasObj = [];
 
     parcelas.forEach(element => {
-        parcelasObj.push(new Parcela(element.data, element.vlr, element.obs));
+        if (element !== undefined)
+            parcelasObj.push(new Parcela(element.data, element.vlr, element.obs));
     });
 
     return parcelasObj;
@@ -46,12 +48,16 @@ module.exports = class Pedido {
      * @param obsInternas
      */
     constructor(cliente, transporte, itens, parcelas, vlrFrete, vlrDesconto, obs, obsInternas) {
-        this.cliente = new Cliente(cliente.nome, cliente.tipoPessoa, cliente.endereco, cliente.cpfCnpj,
-            cliente.ie, cliente.numero, cliente.complemento, cliente.bairro, cliente.cep, cliente.cidade,
-            cliente.uf, cliente.fone, cliente.email);
+        if (cliente !== undefined)
+            this.cliente = new Cliente(cliente.nome, cliente.tipoPessoa, cliente.endereco, cliente.cpfCnpj,
+                cliente.ie, cliente.numero, cliente.complemento, cliente.bairro, cliente.cep, cliente.cidade,
+                cliente.uf, cliente.fone, cliente.email);
+        else this.cliente = new Cliente();
 
-        this.transporte = new Transporte(transporte.transportadora, transporte.tipoFrete, transporte.servicoCorreios,
-            transporte.dadosEtiqueta, transporte.volumes);
+        if (transporte !== undefined)
+            this.transporte = new Transporte(transporte.transportadora, transporte.tipoFrete, transporte.servicoCorreios,
+                transporte.dadosEtiqueta, transporte.volumes);
+        else this.transporte = new Transporte();
 
         this.itens = createItems(itens);
         this.parcelas = createPortions(parcelas);

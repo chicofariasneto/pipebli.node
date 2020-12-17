@@ -10,7 +10,8 @@ const createVolumes = (volumes) => {
     const volumesObj = [];
 
     volumes.forEach(element => {
-        volumesObj.push(new Volume(element.servico, element.codigoRastreamento));
+        if (element !== undefined)
+            volumesObj.push(new Volume(element.servico, element.codigoRastreamento));
     })
 
     return volumesObj;
