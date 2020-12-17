@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "debug": "nodemon src/index.js"
+    "debug": "nodemon src/index.js",
+    "servicePipe": "node src/app/service/pipedrive.service.js",
+    "serviceBling": "node src/app/service/bling.service.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,8 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "fast-xml-parser": "^3.17.5",
+    "mongoose": "^5.11.8",
     "node-cron": "^2.0.3"
   },
   "devDependencies": {
